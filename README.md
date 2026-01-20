@@ -1,4 +1,4 @@
-# Campus Database Normalization & Docker Demonstration
+# UNIVERSITY Database Normalization & Docker Demonstration
 
 A comprehensive laboratory demonstration of database normalization (1NF, 2NF, 3NF) using MySQL in Docker containers.  
 This project simulates a real-world campus management system with a fully normalized database.
