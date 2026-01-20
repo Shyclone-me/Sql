@@ -42,7 +42,7 @@ This project demonstrates:
 ```bash
 git clone https://github.com/YOUR_USERNAME/university-normalization-docker.git
 cd university-normalization-docker
-
+```
 2️⃣ Start MySQL Docker Container
 docker-compose up -d
 
