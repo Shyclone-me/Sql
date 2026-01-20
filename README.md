@@ -44,17 +44,21 @@ git clone https://github.com/YOUR_USERNAME/university-normalization-docker.git
 cd university-normalization-docker
 
 2️⃣ Start MySQL Docker Container
+```bash
 docker-compose up -d
+```
 
 3️⃣ Connect to MySQL
+```bash
 docker exec -it university_db mysql -u root -p
-
+```
 
 Password: root
 
 4️⃣ Run Verification Query
+```bash
 SOURCE /docker-entrypoint-initdb.d/03_verify.sql;
-
+```
 
 Expected Output:
 You will see the fully normalized university table reconstructed, matching the original dataset with no redundancy.
