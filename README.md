@@ -64,6 +64,7 @@ Expected Output:
 You will see the fully normalized university table reconstructed, matching the original dataset with no redundancy.
 
 📁 Project Structure
+```bash
 university-normalization-docker/
 ├── README.md                 # This file
 ├── docker-compose.yml        # Docker configuration
@@ -71,6 +72,7 @@ university-normalization-docker/
 │   ├── 01_schema.sql         # Database schema and tables
 │   ├── 02_data.sql           # Sample data insertion
 │   └── 03_verify.sql         # Verification query to reconstruct data
+```
 
 🏛 Database Schema
 Unnormalized Form (Initial)
@@ -108,7 +110,7 @@ ENROLLMENTS (StudentID, CourseID, Grade)
 🔍 Verification
 
 Join all tables to reconstruct the original dataset:
-
+```bash
 SELECT
     s.StudentID,
     s.Name,
@@ -125,7 +127,7 @@ FROM Students s
 JOIN Majors m ON s.Major = m.Major
 JOIN Enrollments e ON s.StudentID = e.StudentID
 JOIN Courses c ON e.CourseID = c.CourseID;
-
+```
 
 Expected Output:
 The reconstructed table matches the original dataset without redundancy.
@@ -136,8 +138,9 @@ docker-compose down
 # or change host port in docker-compose.yml
 
 Container Already Exists
+```bash
 docker rm -f university_db
-
+```
 MySQL Not Ready
 
 Wait a few seconds for initialization
